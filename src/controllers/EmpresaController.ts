@@ -17,7 +17,7 @@ export default class EmpresaController {
   public async findEmpresa(req: Request, res: Response, next: NextFunction): Promise<Response | undefined> {
     try {
       const empresaService = new EmpresaFindService()
-      return res.send(await empresaService.findEmpresa(req.params.id))
+      return res.send(await empresaService.findEmpresaById(req.params.id))
     } catch (error) {
       next(error)
     }
