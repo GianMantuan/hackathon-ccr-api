@@ -17,7 +17,7 @@ export default class AlunoController {
   public async findAluno(req: Request, res: Response, next: NextFunction): Promise<Response | undefined> {
     try {
       const alunoService = new AlunoFindService()
-      return res.send(await alunoService.findAluno(req.params.id))
+      return res.send(await alunoService.findAlunoById(req.params.id))
     } catch (error) {
       next(error)
     }

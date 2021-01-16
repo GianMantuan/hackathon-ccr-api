@@ -27,6 +27,7 @@ class App {
     this.app.use(helmet());
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({extended: false}));
+    this.app.use(routes)
     this.app.use(cors());
 
     this.app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
