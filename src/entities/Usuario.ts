@@ -3,11 +3,8 @@ import {
   Column,
   Unique,
   PrimaryColumn,
-  ManyToOne,
-  JoinColumn,
   OneToOne,
 } from "typeorm";
-import Tipo from "./Tipo";
 import Curriculo from "./Curriculo";
 
 @Entity("usuario")
@@ -15,9 +12,6 @@ import Curriculo from "./Curriculo";
 export default class Usuario {
   @PrimaryColumn("uuid")
   _id: string;
-
-  @Column()
-  tipoId: string;
 
   @Column()
   nome: string;
@@ -37,8 +31,4 @@ export default class Usuario {
     primary: true,
   })
   curriculo: Curriculo;
-
-  @ManyToOne(() => Tipo, (tipo) => tipo.usuario)
-  @JoinColumn({ name: "tipoId" })
-  tipo: Tipo;
 }
