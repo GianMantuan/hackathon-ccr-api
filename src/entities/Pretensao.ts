@@ -1,6 +1,7 @@
 import Curriculo from "./Curriculo";
 
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import Vaga from "./Vaga";
 
 @Entity("pretensao")
 export default class pretensao {
@@ -14,4 +15,7 @@ export default class pretensao {
 
   @Column()
   pretensaoId: string;
+
+  @ManyToMany(() => Vaga, vaga => vaga.pretensao)
+  vaga: Vaga[];
 }

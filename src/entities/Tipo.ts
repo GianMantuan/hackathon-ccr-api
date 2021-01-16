@@ -1,5 +1,3 @@
-import Usuario from "./Usuario";
-
 import {
   Column,
   Entity,
@@ -8,6 +6,8 @@ import {
   Unique,
   JoinColumn,
 } from "typeorm";
+import Usuario from "./Usuario";
+
 
 @Entity("tipo")
 @Unique(["_id"])

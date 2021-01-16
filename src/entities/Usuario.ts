@@ -1,6 +1,3 @@
-import Tipo from "./Tipo";
-import Curriculo from "./Curriculo";
-
 import {
   Entity,
   Column,
@@ -10,6 +7,8 @@ import {
   JoinColumn,
   OneToOne,
 } from "typeorm";
+import Tipo from "./Tipo";
+import Curriculo from "./Curriculo";
 
 @Entity("usuario")
 @Unique(["_id"])

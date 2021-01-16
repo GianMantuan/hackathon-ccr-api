@@ -32,5 +32,5 @@ export default class Formacao {
 
   @ManyToOne(() => Curriculo, (curriculo) => curriculo.formacao)
   @JoinColumn({ name: "_id" })
-  curriculo: Curriculo[];
+  curriculo: Curriculo;
 }

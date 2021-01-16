@@ -1,4 +1,5 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm'
+import {Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn} from 'typeorm'
+import Curriculo from './Curriculo';
 
 @Entity('experiencia')
 export default class Experiencia {
@@ -22,4 +23,8 @@ export default class Experiencia {
 
   @Column()
   dataTermino?: Date
+
+  @ManyToOne(() => Curriculo, curriculo => curriculo.experiencia)
+  @JoinColumn({name: 'curriculoId'})
+  curriculo: Curriculo;
 }

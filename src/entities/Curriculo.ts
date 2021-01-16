@@ -1,7 +1,3 @@
-import Formacao from "./Formacao";
-import Pretensao from "./Pretensao";
-import Usuario from "./Usuario";
-
 import {
   PrimaryColumn,
   OneToMany,
@@ -13,6 +9,13 @@ import {
   JoinColumn,
 } from "typeorm";
 
+import Certificado from "./Certificado";
+import CurriculoVaga from "./CurriculoVaga";
+import Experiencia from "./Experiencia";
+import Formacao from "./Formacao";
+import Pretensao from "./Pretensao";
+import Usuario from "./Usuario";
+
 @Entity("curriculo")
 @Unique(["_id"])
 export default class Curriculo {
@@ -23,9 +26,9 @@ export default class Curriculo {
   @JoinColumn({ name: "_id" })
   usuario: Usuario;
 
-  @OneToMany(() => Formacao, (formacao) => formacao.curriculo)
-  @JoinColumn({ name: "curriculoId" })
-  formacao: Formacao[];
+  @OneToMany(() => CurriculoVaga, curriculoVaga => curriculoVaga.curriculoId)
+  @JoinColumn({name: '_id'})
+  curriculoVaga: CurriculoVaga[];
 
   @ManyToMany(() => Pretensao, (pretensao) => pretensao.curriculo)
   @JoinTable({
@@ -38,4 +41,16 @@ export default class Curriculo {
     },
   })
   pretensao: Pretensao[];
+
+  @OneToMany(() => Experiencia, experiencia => experiencia.curriculo)
+  @JoinColumn({name: 'curriculoId'})
+  experiencia: Experiencia[];
+
+  @OneToMany(() => Certificado, certificado => certificado.curriculo)
+  @JoinColumn({name: 'curriculoId'})
+  certificado: Certificado[];
+
+  @OneToMany(() => Formacao, (formacao) => formacao.curriculo)
+  @JoinColumn({ name: "curriculoId" })
+  formacao: Formacao[];
 }
