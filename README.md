@@ -32,7 +32,7 @@ yarn start
 
 ### Tecnologias Utilizadas
 
-API desenvolvida em Typescript com Express
+API desenvolvida em Typescript com Express, e banco não relacional MongoDB
 
 ### Licença
 
