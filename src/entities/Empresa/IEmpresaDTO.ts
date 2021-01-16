@@ -4,7 +4,7 @@ export default interface IEmpresaDTO extends Document {
   nome: string
   email: string
   telefone: string
-  cnpj: string
+  CNPJ: string
   cidade: string
   bairro: string
   estado: string
