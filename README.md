@@ -9,7 +9,11 @@ A solução faz uma seleção de acordo com as pretensões e curriculo cada vaga
 
 ### Sobre designer pattern seguido: 
 
+O Design Pattern seguido no desenvolvimento do Emprega.ai - API é o conjunto de princípios SOLID. SOLID é um  acrônimo (em inglês) criado para representar Single Responsibility Principle (Princípio da Responsabilidade Única), Open-Closed Principle (Princípio Aberto-Fechado), Liskov Substitution Principle (Princípio da Substituição de Liskov), Interface Segregation Principle (Princípio da Segregação da Interface), e, Dependency Inversion Principle (Princípio da Inversão da Dependência). Seguindo estes princípios buscamos desenvolver um software mais robusto, escalável e flexível. Dessa forma, a manutenção do software e a implementação de novos requisitos é viabilizado e facilitado, tendo em vista que é considerada a adição de novos features e novos horizontes para a Aplicação.
+
 ### Sobre a arquitetura do código:
+
+A Arquitetura de Software adotada pela equipe para a implementação da solução é a Arquitetura em Camadas (Layered Architecture). Esta arquitetura visa organizar os componentes da aplicação em camadas horizontais de forma que cada camada possui um papel específico dentro da API. O Emprega.ai - API utiliza a Camada de Controle (Requisição), Camada de Serviço, e Camada de Negóçio. Seguindo esta organização temos a característica importante de que cada camada tem suas próprias responsabilidades e não interfere nas responsabilidades das outras camadas. O isolamento gerado em as camadas proporciona a característica que mudanças em uma camada não deveriam afetar as demais camadas.
 
 ### Como rodar:
 Executar uma vez para instalar as dependências:
