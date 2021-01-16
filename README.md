@@ -34,7 +34,13 @@ yarn start
 
 ### Tecnologias Utilizadas
 
-API foi desenvolvida na linguagem de programação [Typescript](https://www.typescriptlang.org/) com [Express](https://expressjs.com/), para persistência e resgaste de dados foi escolhido o banco de dados não relacional [MongoDB](https://www.mongodb.com/). 
+API foi desenvolvida na linguagem de programação [Typescript](https://www.typescriptlang.org/) com [Express](https://expressjs.com/), para persistência e resgaste de dados foi escolhido o banco de dados não relacional [MongoDB](https://www.mongodb.com/). Na operanização utilizou-se [Docker](www.docker.com), que apresenta um nível de segurança com conteinerização das aplicações.
+
+### Repositórios
+
+No desenvolvimento dessa solução dividimos em 3 repositórios sendo um repositório para a API, um repositório para o frontend e um repositório para a documentação produzida no evento. Os links se encontram abaixo:
+
+[API](https://github.com/GianMantuan/hackathon-ccr-api) | [FrontEnd](https://github.com/GianMantuan/hackathon-ccr-mobile) | [Documentação](https://github.com/GianMantuan/hackathon-ccr-documentation)
 
 ### Colaboradores
 
