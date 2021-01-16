@@ -12,7 +12,7 @@ class Server {
   private _http: any;
 
   constructor() {
-    this._port = process.env.NODE_ENV == 'production' ? process.env.PORT : 0;
+    this._port = process.env.NODE_ENV == 'production' ? process.env.PORT : 3000;
     this._app = app;
     this._http = http;
     this.exec();
