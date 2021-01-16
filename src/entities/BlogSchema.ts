@@ -1,8 +1,6 @@
 import { model, Schema } from 'mongoose'
-import IBlogDTO from './IBlogDTO'
-import IBlogSchema from './IBlogSchema'
 
-const BlogSchema = new Schema<IBlogDTO, IBlogSchema>({
+const BlogSchema: Schema = new Schema({
   titulo: {
     type: String,
     required: true
@@ -21,4 +19,4 @@ const BlogSchema = new Schema<IBlogDTO, IBlogSchema>({
   },
 })
 
-export default model<IBlogDTO, IBlogSchema>("Blog", BlogSchema)
+export default model("Blog", BlogSchema)
