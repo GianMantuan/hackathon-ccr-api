@@ -18,5 +18,5 @@ export default interface IAlunoDTO extends Document {
   experiencias: Array<object>
   certificados: Array<object>
   curso: Curso
-  empresa: Array<object>
+  empresa?: Array<object>
 }

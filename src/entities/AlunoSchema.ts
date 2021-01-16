@@ -1,8 +1,13 @@
 import { model, Schema } from 'mongoose'
-import IAlunoDTO from './IAlunoDTO'
-import IAlunoSchema from './IAlunoSchema'
 
-const AlunoSchema = new Schema<IAlunoDTO, IAlunoSchema>({
+enum Curso {
+  ENSINO_FUNDAMENTAL = 0,
+  ENSINO_MEDIO = 1,
+  CURSO_TECNICO = 2,
+  ENSINO_SUPERIOR = 3
+};
+
+const AlunoSchema: Schema = new Schema({
   nome: {
     type: String,
     required: true
@@ -39,10 +44,10 @@ const AlunoSchema = new Schema<IAlunoDTO, IAlunoSchema>({
   }],
   curso: {
     type: Number,
-    enum: [0,1,2,3],
+    enum: Object.values(Curso),
     required: true
   },
   empresa: {}
 })
 
-export default model<IAlunoDTO, IAlunoSchema>("Aluno", AlunoSchema)
+export default model("Aluno", AlunoSchema)

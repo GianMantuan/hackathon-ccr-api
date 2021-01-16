@@ -1,8 +1,6 @@
 import { model, Schema } from 'mongoose'
-import IEmpresaDTO from './IEmpresaDTO'
-import IEmpresaSchema from './IEmpresaSchema'
 
-const EmpresaSchema = new Schema<IEmpresaDTO, IEmpresaSchema>({
+const EmpresaSchema: Schema = new Schema({
   nome: {
     type: String,
     required: true
@@ -33,4 +31,4 @@ const EmpresaSchema = new Schema<IEmpresaDTO, IEmpresaSchema>({
   },
 })
 
-export default model<IEmpresaDTO, IEmpresaSchema>("Empresa", EmpresaSchema)
+export default model("Empresa", EmpresaSchema)
