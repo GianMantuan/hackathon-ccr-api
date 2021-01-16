@@ -8,7 +8,7 @@
     "clean": "rimraf build",
     "watch": "yarn clean && tsc -w",
     "dev": "NODE_ENV=development nodemon build/infra/server.js",
-    "prod": "NODE_ENV=production node build/infra/server.js",
+    "start": "NODE_ENV=production node build/infra/server.js",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
@@ -16,6 +16,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.3.1",
+    "joi": "^17.3.0",
+    "mongoose": "^5.11.12",
+    "pg": "^8.5.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "tsyringe": "^4.4.0",
