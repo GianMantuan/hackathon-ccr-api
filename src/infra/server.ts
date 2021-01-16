@@ -2,6 +2,7 @@ import 'reflect-metadata';
 
 import app from '../app';
 import http from 'http';
+
 import { Application } from 'express';
 
 class Server {

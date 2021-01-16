@@ -1,12 +1,11 @@
 import { ConnectOptions, Connection, connect } from "mongoose";
-
-const {MONGO_USERNAME, MONGO_PASSWORD,MONGO_HOSTNAME,MONGO_DB} = process.env;
+import dotenv from 'dotenv';
 
 export default class Database {
   private _url: string
 
   constructor() {
-    this._url = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}/${MONGO_DB}?retryWrites=true&w=majority`
+    this._url = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOSTNAME}/${process.env.MONGO_DB}?retryWrites=true&w=majority`
   }
 
   public async getOptions(): Promise<ConnectOptions> {
