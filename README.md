@@ -36,6 +36,16 @@ yarn start
 
 API foi desenvolvida na linguagem de programação [Typescript](https://www.typescriptlang.org/) com [Express](https://expressjs.com/), para persistência e resgaste de dados foi escolhido o banco de dados não relacional [MongoDB](https://www.mongodb.com/). 
 
+### Colaboradores
+
+[GianMantuan](https://github.com/GianMantuan) - <b>Gian Carlo Mantuan Dala Rosa <<giancarlo.mdr@gmail.com>>
+
+[RicardoFedrigo](https://github.com/RicardoFedrigo) - <b>Ricardo Fedrigo  <<ricardofedrigo1995@gmail.com>> 
+
+[Monegat](https://github.com/Monegat) - <b>Andre Lucas Monegat Costa <<andre@monegat.com.br>>
+
+[CalebedcLuz](https://github.com/CalebedcLuz)- Calebe de Carvalho Luz <<calebedcluz@gmail.com>>
+
 ### Licença
 
 Este software foi desenvolvido sob licença [Apache v2](https://www.apache.org/licenses/LICENSE-2.0)
