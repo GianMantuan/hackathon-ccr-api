@@ -1,7 +1,11 @@
 import express, {Request, Response, NextFunction} from 'express'
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import dotenv from 'dotenv';
 import cors from 'cors';
+
+import routes from './routes'
+import Database from './infra/mongoose'
 
 class App {
   public app: express.Application;
@@ -9,9 +13,17 @@ class App {
   constructor() {
     this.app = express();
     this.config();
+    this.connect();
+  }
+
+  private async connect(): Promise<void> {
+    const db = new Database()
+    await db.connect()
   }
 
   private config(): void {
+    dotenv.config();
+
     this.app.use(helmet());
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({extended: false}));
