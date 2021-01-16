@@ -18,5 +18,5 @@ export default class Vaga {
   status: boolean;
 
   @Column()
-  pretencaoId: string;
+  pretensaoId: string;
 }

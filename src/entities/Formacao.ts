@@ -1,4 +1,11 @@
-import { Column, Entity, ManyToOne, PrimaryColumn, Unique } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryColumn,
+  Unique,
+} from "typeorm";
 
 import Curriculo from "./Curriculo";
 
@@ -8,11 +15,12 @@ export default class Formacao {
   @PrimaryColumn("uuid")
   _id: string;
 
-  @ManyToOne(() => Curriculo, (curriculo) => curriculo.formacao)
-  curriculo: Curriculo;
-
-  intituicao: string;
   @Column()
+  curriculoId: string;
+
+  @Column()
+  intituicao: string;
+
   @Column()
   areaEstudo: string;
 
@@ -21,4 +29,8 @@ export default class Formacao {
 
   @Column()
   dataTermino: Date;
+
+  @ManyToOne(() => Curriculo, (curriculo) => curriculo.formacao)
+  @JoinColumn({ name: "_id" })
+  curriculo: Curriculo[];
 }

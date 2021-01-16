@@ -1,6 +1,13 @@
 import Usuario from "./Usuario";
 
-import { Column, Entity, OneToMany, PrimaryColumn, Unique } from "typeorm";
+import {
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryColumn,
+  Unique,
+  JoinColumn,
+} from "typeorm";
 
 @Entity("tipo")
 @Unique(["_id"])
@@ -12,5 +19,6 @@ export default class Formacao {
   descricao: string;
 
   @OneToMany(() => Usuario, (usuario) => usuario.tipo)
-  usuario: Usuario;
+  @JoinColumn({ name: "_id" })
+  usuario: Usuario[];
 }
