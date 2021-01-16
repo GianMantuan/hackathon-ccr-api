@@ -7,28 +7,29 @@ API da solução emprega.ai, desenvolvida durante o segundo Hackathon CCR.
 Nossa solução visa reduzir a distância entre a empresa e potênciais estagiários, jovens aprendizes ou empregados.
 A solução faz uma seleção de acordo com as pretensões e curriculo cada vaga.
 
+### Sobre designer pattern seguido: 
+
+### Sobre a arquitetura do código:
+
 ### Como rodar
 Executar uma vez para instalar as dependências:
 ```
 yarn install
 ```
+Compilar o código de TypeScript para JavaScript 
+```
+yarn build
+```
 Rodar a API com:
 ```
 yarn start
 ``` 
-
-
-### Modelo
-
-![Modelo Banco](doc/modelo.png)
-
 ### Funcionalidades
 
 - [ ] Criar uma vaga para estagio|emprego
-- [ ] Criar um usuário
 - [ ] Adicionar um curriculo a um usuário
+- [ ] Review sobre o curriculo do usuário
 - [ ] Adicionar pretensões a um curriculo
-- [ ] Retornar candidatos com pretensões|curriculo próximas a uma vaga
 
 ### Tecnologias Utilizadas
 
