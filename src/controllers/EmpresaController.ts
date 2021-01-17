@@ -37,7 +37,7 @@ export default class EmpresaController {
   public async delete(req: Request, res: Response, next: NextFunction): Promise<Response | undefined> {
     try {
       const empresaService = new EmpresaDeleteService()
-      return res.send(await empresaService.delete(req.body))
+      return res.send(await empresaService.delete(req.params.id))
     } catch (error) {
       next(error)
     }
