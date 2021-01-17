@@ -16,7 +16,11 @@ O Design Pattern seguido no desenvolvimento do Emprega.ai - API é o�
 A Arquitetura de Software adotada pela equipe para a implementação da solução é a Arquitetura em Camadas (Layered Architecture). Esta arquitetura visa organizar os componentes da aplicação em camadas horizontais de forma que cada camada possui um papel específico dentro da API. O Emprega.ai - API utiliza a Camada de Controle (Requisição), Camada de Serviço, e Camada de Negóçio. Seguindo esta organização temos a característica importante de que cada camada tem suas próprias responsabilidades e não interfere nas responsabilidades das outras camadas. O isolamento gerado em as camadas proporciona a característica que mudanças em uma camada não deveriam afetar as demais camadas.
 
 ### Como rodar:
-Executar uma vez para instalar as dependências:
+Para poder ter o ambiente de execução:
+```
+docker-composer up 
+```
+Execute para instalar as dependências do Node.js:
 ```
 yarn install
 ```
@@ -30,11 +34,12 @@ yarn start
 ``` 
 ### Funcionalidades
 
-- [ ] Cadastro de acordo com o estado e cidade.
-- [ ] Criar uma vaga para estagio|emprego
-- [ ] Adicionar um curriculo a um usuário
-- [ ] Review sobre o curriculo do usuário
-- [ ] Adicionar pretensões a um curriculo
+- [x] Rota para cadastro de Empresa.
+- [x] Rota para cadastro de Aluno.
+- [x] Rota para cadastro de Blog. 
+- [ ] CRUD Empresa.
+- [ ] CRUD Aluno.
+- [ ] CRUD Blog.
 
 ### Tecnologias Utilizadas
 
