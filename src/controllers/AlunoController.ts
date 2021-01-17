@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import AlunoAddService from '../services/Aluno/AlunoAddService';
 import AlunoAllService from '../services/Aluno/AlunoAllService';
 import AlunoFindService from '../services/Aluno/AlunoFindService';
+import AlunoEmpresasService from '../services/Aluno/AlunoEmpresasService';
 import AlunoDeleteService from '../services/Aluno/AlunoDeleteService';
 import AlunoUpdateService from '../services/Aluno/AlunoUpdateService';
 
@@ -11,6 +12,15 @@ export default class AlunoController {
     try {
       const alunoService = new AlunoAllService();
       return res.send(await alunoService.all());
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  public async empresas(req: Request, res: Response, next: NextFunction): Promise<Response | undefined> {
+    try {
+      const alunoService = new AlunoEmpresasService();
+      return res.send(await alunoService.alunoEmpresas(req.params.id));
     } catch (error) {
       next(error);
     }

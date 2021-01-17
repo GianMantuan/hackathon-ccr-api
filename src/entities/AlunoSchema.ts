@@ -24,6 +24,10 @@ const AlunoSchema: Schema = new Schema({
     type: String,
     required: true
   },
+  pretensao: {
+    type: String,
+    required: true
+  },
   cidade: {
     type: String,
     required: true
@@ -36,18 +40,23 @@ const AlunoSchema: Schema = new Schema({
     type: String,
     required: true
   },
-  experiencias: [{
-
-  }],
+  experiencias: {
+    type: Array,
+    required: false
+  },
   certificados: [{
-
+    type: Array,
+    required: false
   }],
   curso: {
     type: Number,
     enum: Object.values(Curso),
     required: true
   },
-  empresa: {}
+  empresa: {
+    type: Array,
+    required: false
+  }
 })
 
 export default model("Aluno", AlunoSchema)

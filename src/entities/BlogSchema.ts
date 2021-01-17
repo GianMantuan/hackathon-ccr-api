@@ -7,7 +7,7 @@ const BlogSchema: Schema = new Schema({
   },
   descricao: {
     type: String,
-    required: true
+    required: false
   },
   texto: {
     type: String,
