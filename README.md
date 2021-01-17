@@ -38,9 +38,9 @@ yarn start
 - [x] Rota para cadastro de Empresa.
 - [x] Rota para cadastro de Aluno.
 - [x] Rota para cadastro de Blog. 
-- [ ] CRUD Empresa.
-- [ ] CRUD Aluno.
-- [ ] CRUD Blog.
+- [x] CRUD Empresa.
+- [x] CRUD Aluno.
+- [x] CRUD Blog.
 
 ### Tecnologias Utilizadas
 
